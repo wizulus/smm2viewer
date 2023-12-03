@@ -1,0 +1,109 @@
+// app global css in SCSS form
+
+@font-face {
+  font-family: 'Mario Maker';
+  src: url('assets/Super Mario Maker Extended.woff2') format('woff2');
+}
+.mario-maker {
+  font-family: 'Mario Maker';
+}
+
+@font-face {
+  font-family: 'Mario';
+  src: url('assets/SuperMario256.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Zelda';
+  src: url('assets/the-legend-of-zelda-nes.woff2') format('woff2');
+}
+
+.zelda {
+  font-family: 'Zelda';
+}
+
+.mario {
+  font-family: 'Mario';
+}
+
+.icon-32 svg {
+  height: 32px;
+}
+
+.icon-24 svg {
+  height: 24px;
+}
+
+.icon-16 svg {
+  height: 16px;
+}
+
+.link {
+  color: inherit
+}
+
+$mc-accent: #191d25;
+$mc-logo-white: #ffffff;
+$mc-logo-blue: #6193ff;
+$mc-background: #282c34;
+$mc-dark: #14171d;
+$mc-primary: #0064e0;
+$mc-border: #282c34;
+$mc-light: #363a42;
+
+.mc-border {
+  border-style: solid;
+  border-color: $mc-border;
+  border-width: 2px;
+  border-radius: 8px;
+}
+
+.bg-mc-dark { background-color: $mc-dark; }
+.bg-mc-primary { background-color: $mc-primary; }
+.bg-mc-accent { background-color: $mc-accent; }
+.bg-mc-background { background-color: $mc-background; }
+.bg-mc-primary { background-color: $mc-primary; }
+.bg-mc-light { background-color: $mc-light; }
+.text-mc-white { color: $mc-logo-white; }
+.text-mc-blue { color: $mc-logo-blue; }
+
+.mc-select-border {
+  .q-field__control {
+    border-style: solid;
+    border-color: $mc-border;
+    border-width: 2px;
+    border-radius: 8px;
+    padding-left: 8px!important;
+    padding-right: 8px!important;
+  }
+}
+
+.input-px {
+  .q-field__control {
+    padding-left: 8px!important;
+    padding-right: 8px!important;
+  }
+}
+
+a {
+  color: #08f;
+}
+
+.icon-link {
+  text-decoration: none;
+  > svg {
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    margin-right: 0.25em;
+  }
+  > span {
+    text-decoration: underline;
+  }
+}
+
+@media screen {
+  .ld {
+    display: none;
+  }
+}

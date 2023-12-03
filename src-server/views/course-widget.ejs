@@ -1,0 +1,26 @@
+<div class="ld" itemscope itemtype="https://schema.org/BlogPosting">
+  <h1 itemprop="headline"><%= ld.headline %></h1>
+  <p itemprop="description"><%= ld.description %></p>
+  <div>
+    <strong>Course ID:</strong>
+    <span itemprop="identifier"><%= ld.identifier %></span>
+  </div>
+  <div>
+    <strong>Course Name:</strong>
+    <span itemprop="name"><%= ld.name %></span>
+  </div>
+  <div>
+    <strong>Created:</strong>
+    <time itemprop="dateCreated" datetime="<%= date(ld.datePublished) %>"><%= ld.datePublished %></time>
+  </div>
+  <div>
+    <strong>Author:</strong>
+    <%- playerWidget({ ld: ld.author, itemprop: 'author' }) %>
+  </div>
+  <% for (const player of ld.contributors) { %>
+  <div>
+    <strong><%= player.disambiguatingDescription %>:</strong>
+    <%- playerWidget({ ld: player, itemprop: 'contributor' }) %>
+  </div>
+  <% } %>
+</div>

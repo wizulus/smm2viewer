@@ -1,0 +1,7 @@
+{
+  "ext": "js cjs mjs json",
+  "watch": [
+    "src-server"
+  ],
+  "script": "src-server/main.js"
+}

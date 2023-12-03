@@ -1,0 +1,15 @@
+<% if (ld) { %>
+<div class="ld" itemscope itemtype="https://schema.org/Person" <% if (typeof itemprop !== 'undefined') { %> itemprop="<%= itemprop || '' %>"<% } %>>
+  <a itemprop="url" href="<%= ld.url %>">
+    <img itemprop="image" src="<%= ld.image %>" width="32" />
+    <span itemprop="name"><%= ld.name %></span>
+    <code itemprop="identifier"><%= formatCode(ld.identifier) %></code>
+    <% if (ld.address.addressCountry) { %>
+    (<span itemscope itemprop="address"><span itemprop="addressCountry"><%= ld.address.addressCountry %></span></span>)  </a>
+    <% } %>
+</div>
+<% } else { %>
+<div>
+  <span>Unknown</span>
+</div>
+<% } %>
